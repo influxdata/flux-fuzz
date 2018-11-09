@@ -1,0 +1,4 @@
+n = 1
+fieldSelect = ""
+from(bucket:"")
+    >e(t:2018-Z)|>lter(fn:(r)=>r._field ==fieldSelect)

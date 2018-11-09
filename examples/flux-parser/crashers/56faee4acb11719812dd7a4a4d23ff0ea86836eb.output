@@ -1,0 +1,230 @@
+program hanged (timeout 10 seconds)
+
+SIGABRT: abort
+PC=0x5153f6 m=0 sigcode=0
+
+goroutine 1 [running]:
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67e960, 0x569fc6, 0xc, 0xc0003c3d90)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4971 +0x1b6 fp=0xc00030e348 sp=0xc00030e2f8 pc=0x5153f6
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x672200, 0xc00030e510, 0x517d11, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030e3c0 sp=0xc00030e348 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x672200, 0xc0019bad40, 0x0, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030e428 sp=0xc00030e3c0 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseSeqExpr(0xc000d3a000, 0x677140, 0x0, 0x0, 0xc000984000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5250 +0x143 fp=0xc00030e520 sp=0xc00030e428 pc=0x518d43
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531360, 0x677140, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5012 +0x23e fp=0xc00030e588 sp=0xc00030e520 pc=0x51572e
+github.com/influxdata/flux/parser.(*parser).parseChoiceExpr(0xc000d3a000, 0x6770c0, 0x0, 0x0, 0xc00030e600)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5141 +0xcb fp=0xc00030e5f0 sp=0xc00030e588 pc=0x51751b
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x5310e0, 0x6770c0, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4996 +0x69a fp=0xc00030e658 sp=0xc00030e5f0 pc=0x515b8a
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67e8a0, 0x569061, 0x7, 0xc0003c3e58)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc00030e6a8 sp=0xc00030e658 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x672300, 0x0, 0x0, 0x203000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030e720 sp=0xc00030e6a8 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x672300, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030e788 sp=0xc00030e720 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseActionExpr(0xc000d3a000, 0x677180, 0x0, 0x0, 0x487700)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5027 +0x96 fp=0xc00030e858 sp=0xc00030e788 pc=0x515eb6
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x530fa0, 0x677180, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4986 +0x320 fp=0xc00030e8c0 sp=0xc00030e858 pc=0x515810
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67e900, 0x56a4b6, 0xe, 0xc0003c37f8)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc00030e910 sp=0xc00030e8c0 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x6718c0, 0x203000, 0x203000, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030e988 sp=0xc00030e910 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x6718c0, 0x0, 0x20, 0x20)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030e9f0 sp=0xc00030e988 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseLabeledExpr(0xc000d3a000, 0x678a40, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5152 +0x6c fp=0xc00030ea48 sp=0xc00030e9f0 pc=0x51776c
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531160, 0x678a40, 0xc0019bad20, 0x0, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4998 +0x525 fp=0xc00030eab0 sp=0xc00030ea48 pc=0x515a15
+github.com/influxdata/flux/parser.(*parser).parseSeqExpr(0xc000d3a000, 0x675dc0, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5250 +0x143 fp=0xc00030eba8 sp=0xc00030eab0 pc=0x518d43
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531360, 0x675dc0, 0x0, 0x0, 0xc00030ec00)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5012 +0x23e fp=0xc00030ec10 sp=0xc00030eba8 pc=0x51572e
+github.com/influxdata/flux/parser.(*parser).parseActionExpr(0xc000d3a000, 0x675d80, 0x0, 0x0, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5027 +0x96 fp=0xc00030ece0 sp=0xc00030ec10 pc=0x515eb6
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x530fa0, 0x675d80, 0x0, 0x0, 0xc00030ed00)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4986 +0x320 fp=0xc00030ed48 sp=0xc00030ece0 pc=0x515810
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67e060, 0x56b0d3, 0x12, 0xc0003c30b0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc00030ed98 sp=0xc00030ed48 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x6704c0, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030ee10 sp=0xc00030ed98 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x6704c0, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030ee78 sp=0xc00030ee10 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseChoiceExpr(0xc000d3a000, 0x675200, 0x3, 0x517d11, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5141 +0xcb fp=0xc00030eee0 sp=0xc00030ee78 pc=0x51751b
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x5310e0, 0x675200, 0x0, 0xc0019b95c0, 0x537660)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4996 +0x69a fp=0xc00030ef48 sp=0xc00030eee0 pc=0x515b8a
+github.com/influxdata/flux/parser.(*parser).parseLabeledExpr(0xc000d3a000, 0x6782c0, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5152 +0x6c fp=0xc00030efa0 sp=0xc00030ef48 pc=0x51776c
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531160, 0x6782c0, 0x0, 0x0, 0xc00030f000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4998 +0x525 fp=0xc00030f008 sp=0xc00030efa0 pc=0x515a15
+github.com/influxdata/flux/parser.(*parser).parseActionExpr(0xc000d3a000, 0x6751c0, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5027 +0x96 fp=0xc00030f0d8 sp=0xc00030f008 pc=0x515eb6
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x530fa0, 0x6751c0, 0x0, 0x0, 0xc0016bf700)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4986 +0x320 fp=0xc00030f140 sp=0xc00030f0d8 pc=0x515810
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67db20, 0x56a787, 0xf, 0xc0003c39b0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc00030f190 sp=0xc00030f140 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66f5c0, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030f208 sp=0xc00030f190 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66f5c0, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030f270 sp=0xc00030f208 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseChoiceExpr(0xc000d3a000, 0x674680, 0x0, 0x0, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5141 +0xcb fp=0xc00030f2d8 sp=0xc00030f270 pc=0x51751b
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x5310e0, 0x674680, 0x0, 0x0, 0x515a00)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4996 +0x69a fp=0xc00030f340 sp=0xc00030f2d8 pc=0x515b8a
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67d400, 0x569076, 0x7, 0xc0003c3640)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc00030f390 sp=0xc00030f340 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66f300, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030f408 sp=0xc00030f390 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66f300, 0x0, 0x0, 0xc0016bf400)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030f470 sp=0xc00030f408 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseChoiceExpr(0xc000d3a000, 0x674640, 0x0, 0xc00009c000, 0x3)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5141 +0xcb fp=0xc00030f4d8 sp=0xc00030f470 pc=0x51751b
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x5310e0, 0x674640, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4996 +0x69a fp=0xc00030f540 sp=0xc00030f4d8 pc=0x515b8a
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67d3a0, 0x5690a7, 0x7, 0xc0003c3c00)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc00030f590 sp=0xc00030f540 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66f240, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030f608 sp=0xc00030f590 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66f240, 0x0, 0x0, 0xc00009c000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030f670 sp=0xc00030f608 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseChoiceExpr(0xc000d3a000, 0x674540, 0xc000984030, 0x45a2a2, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5141 +0xcb fp=0xc00030f6d8 sp=0xc00030f670 pc=0x51751b
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x5310e0, 0x674540, 0xc000378000, 0x4acf2d, 0xc000984030)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4996 +0x69a fp=0xc00030f740 sp=0xc00030f6d8 pc=0x515b8a
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67d340, 0x56a7f0, 0xf, 0xc0003c3bf8)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc00030f790 sp=0xc00030f740 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66ef80, 0x203000, 0x203000, 0x4aeae7)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030f808 sp=0xc00030f790 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66ef80, 0x4118df, 0x20, 0x20)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030f870 sp=0xc00030f808 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseLabeledExpr(0xc000d3a000, 0x677fc0, 0xc00030f918, 0x1, 0x2f)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5152 +0x6c fp=0xc00030f8c8 sp=0xc00030f870 pc=0x51776c
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531160, 0x677fc0, 0xc0019ba5a0, 0x0, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4998 +0x525 fp=0xc00030f930 sp=0xc00030f8c8 pc=0x515a15
+github.com/influxdata/flux/parser.(*parser).parseSeqExpr(0xc000d3a000, 0x674380, 0x4, 0xc00009c000, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5250 +0x143 fp=0xc00030fa28 sp=0xc00030f930 pc=0x518d43
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531360, 0x674380, 0x0, 0x0, 0xc00009c068)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5012 +0x23e fp=0xc00030fa90 sp=0xc00030fa28 pc=0x51572e
+github.com/influxdata/flux/parser.(*parser).parseActionExpr(0xc000d3a000, 0x674340, 0xc000984030, 0x45a2a2, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5027 +0x96 fp=0xc00030fb60 sp=0xc00030fa90 pc=0x515eb6
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x530fa0, 0x674340, 0xc000378000, 0x4acf2d, 0xc000984030)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4986 +0x320 fp=0xc00030fbc8 sp=0xc00030fb60 pc=0x515810
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67d220, 0x56a4ee, 0xe, 0xc0003c3bf0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc00030fc18 sp=0xc00030fbc8 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66ed80, 0x203000, 0x203000, 0x4aeae7)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc00030fc90 sp=0xc00030fc18 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66ed80, 0x203000, 0x20, 0x20)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc00030fcf8 sp=0xc00030fc90 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseLabeledExpr(0xc000d3a000, 0x677f40, 0xc00030fda0, 0x1, 0x2f)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5152 +0x6c fp=0xc00030fd50 sp=0xc00030fcf8 pc=0x51776c
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531160, 0x677f40, 0xc0019ba580, 0x0, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4998 +0x525 fp=0xc00030fdb8 sp=0xc00030fd50 pc=0x515a15
+github.com/influxdata/flux/parser.(*parser).parseSeqExpr(0xc000d3a000, 0x674180, 0x4, 0xc00009c000, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5250 +0x143 fp=0xc00030feb0 sp=0xc00030fdb8 pc=0x518d43
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531360, 0x674180, 0x0, 0x0, 0xc00009c068)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5012 +0x23e fp=0xc00030ff18 sp=0xc00030feb0 pc=0x51572e
+github.com/influxdata/flux/parser.(*parser).parseActionExpr(0xc000d3a000, 0x674140, 0xc000d3a000, 0x0, 0x1)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5027 +0x96 fp=0xc00030ffe8 sp=0xc00030ff18 pc=0x515eb6
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x530fa0, 0x674140, 0xc000378000, 0x4acf2d, 0xc000984030)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4986 +0x320 fp=0xc000310050 sp=0xc00030ffe8 pc=0x515810
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67d160, 0x5692b7, 0x8, 0xc0003c3578)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc0003100a0 sp=0xc000310050 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66eb80, 0x203000, 0x203000, 0x20)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc000310118 sp=0xc0003100a0 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66eb80, 0x6802c0, 0x20, 0x20)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc000310180 sp=0xc000310118 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseLabeledExpr(0xc000d3a000, 0x677ec0, 0xc0003102e0, 0x518d43, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5152 +0x6c fp=0xc0003101d8 sp=0xc000310180 pc=0x51776c
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531160, 0x677ec0, 0xc0019ba560, 0x0, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4998 +0x525 fp=0xc000310240 sp=0xc0003101d8 pc=0x515a15
+github.com/influxdata/flux/parser.(*parser).parseSeqExpr(0xc000d3a000, 0x673fc0, 0xc000310418, 0x515eb6, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5250 +0x143 fp=0xc000310338 sp=0xc000310240 pc=0x518d43
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531360, 0x673fc0, 0x0, 0x0, 0xc0003c3d00)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5012 +0x23e fp=0xc0003103a0 sp=0xc000310338 pc=0x51572e
+github.com/influxdata/flux/parser.(*parser).parseActionExpr(0xc000d3a000, 0x673f80, 0xc0003104d0, 0x5152f3, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5027 +0x96 fp=0xc000310470 sp=0xc0003103a0 pc=0x515eb6
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x530fa0, 0x673f80, 0x0, 0x0, 0xc0003c3000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4986 +0x320 fp=0xc0003104d8 sp=0xc000310470 pc=0x515810
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67d0a0, 0x569a71, 0xa, 0xc0003c3178)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc000310528 sp=0xc0003104d8 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66e9c0, 0x203000, 0x203000, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc0003105a0 sp=0xc000310528 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66e9c0, 0x48778a, 0x20, 0x20)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc000310608 sp=0xc0003105a0 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseLabeledExpr(0xc000d3a000, 0x677e40, 0xc00000002f, 0x518d43, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5152 +0x6c fp=0xc000310660 sp=0xc000310608 pc=0x51776c
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531160, 0x677e40, 0xc0019ba540, 0x0, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4998 +0x525 fp=0xc0003106c8 sp=0xc000310660 pc=0x515a15
+github.com/influxdata/flux/parser.(*parser).parseSeqExpr(0xc000d3a000, 0x673c40, 0x0, 0x0, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5250 +0x143 fp=0xc0003107c0 sp=0xc0003106c8 pc=0x518d43
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531360, 0x673c40, 0x0, 0x73, 0x4acf2d)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5012 +0x23e fp=0xc000310828 sp=0xc0003107c0 pc=0x51572e
+github.com/influxdata/flux/parser.(*parser).parseActionExpr(0xc000d3a000, 0x673c00, 0x45a04b, 0x7f3dcf6d8000, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5027 +0x96 fp=0xc0003108f8 sp=0xc000310828 pc=0x515eb6
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x530fa0, 0x673c00, 0x4b14dc, 0xc00009c000, 0xc000984030)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4986 +0x320 fp=0xc000310960 sp=0xc0003108f8 pc=0x515810
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67cfe0, 0x56930f, 0x8, 0xc0003c34a0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc0003109b0 sp=0xc000310960 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66e800, 0x203000, 0x203000, 0x28)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc000310a28 sp=0xc0003109b0 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66e800, 0xc002293f38, 0x20, 0x20)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc000310a90 sp=0xc000310a28 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseLabeledExpr(0xc000d3a000, 0x677dc0, 0x537660, 0x6a09c0, 0xc000310b70)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5152 +0x6c fp=0xc000310ae8 sp=0xc000310a90 pc=0x51776c
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531160, 0x677dc0, 0xc0019ba520, 0x0, 0x2)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4998 +0x525 fp=0xc000310b50 sp=0xc000310ae8 pc=0x515a15
+github.com/influxdata/flux/parser.(*parser).parseSeqExpr(0xc000d3a000, 0x673a00, 0x537660, 0x6a09c0, 0xc000310cd0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5250 +0x143 fp=0xc000310c48 sp=0xc000310b50 pc=0x518d43
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531360, 0x673a00, 0xc0019b4c00, 0xc000310d20, 0x5152f3)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5012 +0x23e fp=0xc000310cb0 sp=0xc000310c48 pc=0x51572e
+github.com/influxdata/flux/parser.(*parser).parseActionExpr(0xc000d3a000, 0x6739c0, 0x0, 0xc000310e00, 0x515626)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5027 +0x96 fp=0xc000310d80 sp=0xc000310cb0 pc=0x515eb6
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x530fa0, 0x6739c0, 0xc000310e68, 0x51751b, 0xc000d3a000)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4986 +0x320 fp=0xc000310de8 sp=0xc000310d80 pc=0x515810
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67cec0, 0x56ad45, 0x11, 0xc0003c3568)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc000310e38 sp=0xc000310de8 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66e7c0, 0x8, 0xc0016c2480, 0xc000310f60)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc000310eb0 sp=0xc000310e38 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66e7c0, 0x20, 0x536300, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc000310f18 sp=0xc000310eb0 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseRule(0xc000d3a000, 0x67cda0, 0x568b60, 0x4, 0xc0003c33d0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4969 +0xb3 fp=0xc000310f68 sp=0xc000310f18 pc=0x5152f3
+github.com/influxdata/flux/parser.(*parser).parseRuleRefExpr(0xc000d3a000, 0x66f740, 0x5354c0, 0x6a09c0, 0x1)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5242 +0xf7 fp=0xc000310fe0 sp=0xc000310f68 pc=0x518a37
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531320, 0x66f740, 0x1, 0x11, 0x537660)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5010 +0x136 fp=0xc000311048 sp=0xc000310fe0 pc=0x515626
+github.com/influxdata/flux/parser.(*parser).parseLabeledExpr(0xc000d3a000, 0x6780c0, 0x5354c0, 0x6a09c0, 0xc000311101)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5152 +0x6c fp=0xc0003110a0 sp=0xc000311048 pc=0x51776c
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531160, 0x6780c0, 0x5354c0, 0x6a09c0, 0x1)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:4998 +0x525 fp=0xc000311108 sp=0xc0003110a0 pc=0x515a15
+github.com/influxdata/flux/parser.(*parser).parseSeqExpr(0xc000d3a000, 0x674740, 0x203000, 0x203000, 0x0)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5250 +0x143 fp=0xc000311200 sp=0xc000311108 pc=0x518d43
+github.com/influxdata/flux/parser.(*parser).parseExpr(0xc000d3a000, 0x531360, 0x674740, 0x0, 0x30, 0x30)
+	/tmp/go-fuzz-build541457587/gopath/src/github.com/influxdata/flux/parser/flux.go:5012 +0x23e fp=0xc000311268 sp=0xc000311200 pc=0x51572e
+...additional frames elided...
+
+rax    0xc000d3a000
+rbx    0x0
+rcx    0x0
+rdx    0x0
+rdi    0x80
+rsi    0x59
+rbp    0xc00030e338
+rsp    0xc00030e2f8
+r8     0xc0
+r9     0x569fc6
+r10    0x531320
+r11    0x53
+r12    0x4
+r13    0xda
+r14    0x584bf0
+r15    0x38
+rip    0x5153f6
+rflags 0x283
+cs     0x33
+fs     0x0
+gs     0x0
+exit status 2
